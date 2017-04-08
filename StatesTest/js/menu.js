@@ -13,16 +13,23 @@ var menuState = {
 
 		//wkey.onDown.addOnce(this.start, this);
 		var button;
-		button = game.add.button(game.world.centerX - 95, 400, 'button');
+		button = game.add.button(game.world.centerX - 95, 400, 'button', this.start, this, 2, 1, 0);
 
-	    // button.onInputOver.add(over, this);
-	    // button.onInputOut.add(out, this);
+	    button.onInputOver.add(this.over, this);
+	    button.onInputOut.add(this.out, this);
 	},
 
 	start: function(){
 		game.state.start('play');
-	}
+	},
 
+	over: function(){
+		console.log('button over');
+	},
+
+	out: function(){
+		console.log('button out');
+	}
 	// function over() {
  //    	console.log('button over');
 	// }
