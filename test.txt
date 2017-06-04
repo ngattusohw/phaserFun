@@ -1,0 +1,1 @@
+This is a quick test file to see if I set vim/git up through command line on different pc
